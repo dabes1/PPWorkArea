@@ -1,2 +1,19 @@
 ﻿body {
 }
+
+.buttonStd {
+    height:25px;
+    width:100px;
+    background-color:lightsteelblue;
+    color:white;
+}
+
+.inputTextStd {
+    height:25px;
+    width:200px;
+}
+
+.inputTextStd:hover {
+    color:red;
+    border-width:5px;
+}
