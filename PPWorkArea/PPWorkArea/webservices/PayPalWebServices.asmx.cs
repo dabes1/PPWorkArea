@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Services;
 // added using
 using System.Web.Script.Services;
+using PayPalClassObjects;
 
 namespace PPWorkArea.webservices
 {
@@ -25,10 +26,18 @@ namespace PPWorkArea.webservices
             return "Hello World";
         }
 
+
+        #region Payment With Credit Card
+        
         [WebMethod(EnableSession = true)]
         public string PaymentWithCreditCard(string inAmt)
         {
+            PaymentWithCreditCard payPalPmt = new PaymentWithCreditCard("Tester");
+            var apiContext = payPalPmt.GetApiContext();
+ 
+
             return "Payment with a Credit Card of the amount: " + inAmt;
         }
+        #endregion
     }
 }
