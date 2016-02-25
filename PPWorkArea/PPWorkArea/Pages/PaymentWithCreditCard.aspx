@@ -19,7 +19,7 @@
         </asp:ScriptManager>
 
         <div>
-            <h1>This page demonstrates PayPal's credit card payment processing</h1>
+            <h1>Payment with Credit Card</h1>
         </div>
         <div>
             <p style="display:inline">Enter Payment Amount:</p>
