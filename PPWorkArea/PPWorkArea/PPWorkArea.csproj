@@ -82,6 +82,7 @@
     <Content Include="Pages\PaymentWithCreditCard.aspx" />
     <Content Include="scripts\Default.js" />
     <Content Include="scripts\PaymentWithCreditCard.js" />
+    <Content Include="Web.config" />
     <Content Include="webservices\PayPalWebServices.asmx" />
   </ItemGroup>
   <ItemGroup>
@@ -109,7 +110,14 @@
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
