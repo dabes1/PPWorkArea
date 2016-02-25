@@ -119,30 +119,30 @@ namespace PPWorkArea.webservices
             };
 
             #region Original attempt from PayPal sample
-            //string rtnMsg = "Payment with a Credit Card of the amount: " + inAmt;
-            //PaymentWithCreditCard payPalPmt = new PaymentWithCreditCard();
+            string rtnMsg = "Payment with a Credit Card of the amount: " + inAmt;
+            PaymentWithCreditCard payPalPmt = new PaymentWithCreditCard();
 
-            //if (payPalPmt.ProcessPayment(transaction, payer, payment) != 0)
-            //    rtnMsg = "Error processing PayPal Payment with Credit Card";
+            if (payPalPmt.ProcessPayment(transaction, payer, payment) != 0)
+                rtnMsg = "Error processing PayPal Payment with Credit Card";
 
-            //return rtnMsg;
+            return rtnMsg;
             #endregion
 
             #region 2nd Attempt from the following URL: https://github.com/paypal/PayPal-NET-SDK/wiki/Make-Your-First-Call
-            var config = ConfigManager.Instance.GetProperties();
-            var accessToken = new OAuthTokenCredential(config).GetAccessToken();
-            var apiContext = new APIContext(accessToken);
-            apiContext.Config = ConfigManager.Instance.GetProperties();
-            apiContext.Config["connectionTimeout"] = "1000";
+            //var config = ConfigManager.Instance.GetProperties();
+            //var accessToken = new OAuthTokenCredential(config).GetAccessToken();
+            //var apiContext = new APIContext(accessToken);
+            //apiContext.Config = ConfigManager.Instance.GetProperties();
+            //apiContext.Config["connectionTimeout"] = "1000";
 
-            if (apiContext.HTTPHeaders == null)
-            {
-                apiContext.HTTPHeaders = new Dictionary<string, string>();
-            }
+            //if (apiContext.HTTPHeaders == null)
+            //{
+            //    apiContext.HTTPHeaders = new Dictionary<string, string>();
+            //}
 
-            apiContext.HTTPHeaders["PmtWithCreditCard"] = "Payment With Credit Card";
-            var paymenttest = Payment.Get(apiContext, "PAY-0XL713371A312273YKE2GCNI");
-            return string.Empty;
+            //apiContext.HTTPHeaders["PmtWithCreditCard"] = "Payment With Credit Card";
+            //var paymenttest = Payment.Get(apiContext, "PAY-0XL713371A312273YKE2GCNI");
+            //return string.Empty;
             #endregion
         }
         #endregion
