@@ -18,6 +18,15 @@
             <input class="buttonStd" type="button" value="Launch" onclick="payWithCreditCard()" />
             <label class="labelStd">Payment with Credit Card</label>
         </div>
+
+        <div>
+        <h1>This</h1>
+            <div>
+                <input class="buttonStd" type="button" value="Launch" onclick="launchSQLConnectionTest()" />
+                <label class="labelStd">Test the SQL Connection</label>
+            </div>
+
+        </div>
     
     </div>
     </form>

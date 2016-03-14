@@ -75,23 +75,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="webservices\SQLDatabaseServices.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\StandardStyles.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Pages\ConnectToSQL.aspx" />
     <Content Include="Pages\PaymentWithCreditCard.aspx" />
+    <Content Include="scripts\ConnectToSQL.js" />
     <Content Include="scripts\Default.js" />
     <Content Include="scripts\PaymentWithCreditCard.js" />
     <Content Include="Web.config" />
     <Content Include="webservices\PayPalWebServices.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassObjects\Class1.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConnectToSQL.aspx.cs">
+      <DependentUpon>ConnectToSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ConnectToSQL.aspx.designer.cs">
+      <DependentUpon>ConnectToSQL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\PaymentWithCreditCard.aspx.cs">
       <DependentUpon>PaymentWithCreditCard.aspx</DependentUpon>
@@ -109,8 +120,15 @@
       <DependentUpon>PayPalWebServices.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="webservices\SQLDatabaseServices.asmx.cs">
+      <DependentUpon>SQLDatabaseServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="connections.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -118,6 +136,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
