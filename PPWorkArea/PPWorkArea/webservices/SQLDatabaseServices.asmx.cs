@@ -32,12 +32,13 @@ namespace PPWorkArea.webservices
 
 
         [WebMethod(EnableSession = true)]
-        public int ConnectToSQLDB()
+        public string ConnectToSQLDB()
         {
+            string oStr = string.Empty;
             Class1 cls = new Class1();
-            DataTable dt = cls.RetrieveData();
+            DataTable dt = cls.RetrieveData(out oStr);
 
-            return 0;
+            return oStr;
         }
 
     }

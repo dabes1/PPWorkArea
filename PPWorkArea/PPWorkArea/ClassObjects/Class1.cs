@@ -19,8 +19,9 @@ namespace PPWorkArea.ClassObjects
             _connectionString = ConfigurationManager.ConnectionStrings["SiteSqlServer"].ConnectionString;
         }
 
-        public DataTable RetrieveData()
+        public DataTable RetrieveData(out string oMsg)
         {
+            oMsg = string.Empty;
             DataTable dt = new DataTable();
             using (SqlConnection con = new SqlConnection(_connectionString))
             {
@@ -31,10 +32,12 @@ namespace PPWorkArea.ClassObjects
                         con.Open();
                         SqlDataReader sdr = cmd.ExecuteReader();
                         dt.Load(sdr);
+                        oMsg = "DB Connection/Connectionstring VALID!!   **Data Extracted from DB.";
                     }
                 }
                 catch (Exception e)
                 {
+                    oMsg = e.Message;
                     return null;
                 }
             }

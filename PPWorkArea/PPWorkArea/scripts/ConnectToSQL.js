@@ -5,5 +5,5 @@
 };
 
 function sqlCallbackFunction(input) {
-    alert("SQL Connection executed" + input);
+    alert("SQL Connection executed - " + input);
 }
