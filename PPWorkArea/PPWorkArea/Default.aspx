@@ -12,19 +12,31 @@
     <form id="form1" runat="server">
     <div>
 
-        <h1>This application is the tester Application for PayPal processing.</h1>
-
         <div>
+            <h1>This launches the tester Application for PayPal processing.</h1>
             <input class="buttonStd" type="button" value="Launch" onclick="payWithCreditCard()" />
             <label class="labelStd">Payment with Credit Card</label>
         </div>
 
         <div>
-        <h1>This</h1>
+            <h1>This launches a page to test your current SQL DB connection</h1>
             <div>
                 <input class="buttonStd" type="button" value="Launch" onclick="launchSQLConnectionTest()" />
                 <label class="labelStd">Test the SQL Connection</label>
             </div>
+        </div>
+
+        <div>
+            <h1>This launches ASP.NET/HTML WorkArea page</h1>
+            <div>
+                <input class="buttonStd" type="button" value="Launch" onclick="launchWorkArea()" />
+                <label class="labelStd">WorkArea is for testing any kind of stuff!!</label>
+            </div>
+        </div>
+
+
+        <div>
+
 
         </div>
     

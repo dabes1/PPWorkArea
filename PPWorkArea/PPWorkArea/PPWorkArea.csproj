@@ -75,7 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Pages\WorkArea.aspx" />
+    <Content Include="scripts\WorkArea.js" />
     <Content Include="webservices\SQLDatabaseServices.asmx" />
+    <Content Include="webservices\WorkAreaWebServices.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\StandardStyles.css" />
@@ -111,6 +114,13 @@
     <Compile Include="Pages\PaymentWithCreditCard.aspx.designer.cs">
       <DependentUpon>PaymentWithCreditCard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\WorkArea.aspx.cs">
+      <DependentUpon>WorkArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WorkArea.aspx.designer.cs">
+      <DependentUpon>WorkArea.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PayPalClassObjects\Common.cs" />
     <Compile Include="PayPalClassObjects\PaymentWithCreditCard.cs" />
     <Compile Include="PayPalClassObjects\PayPalBase.cs" />
@@ -122,6 +132,10 @@
     </Compile>
     <Compile Include="webservices\SQLDatabaseServices.asmx.cs">
       <DependentUpon>SQLDatabaseServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="webservices\WorkAreaWebServices.asmx.cs">
+      <DependentUpon>WorkAreaWebServices.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
