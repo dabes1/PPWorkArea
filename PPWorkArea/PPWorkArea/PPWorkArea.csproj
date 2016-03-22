@@ -74,6 +74,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="connections.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="Pages\WorkArea.aspx" />
     <Content Include="scripts\WorkArea.js" />
@@ -140,9 +143,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="connections.config">
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
