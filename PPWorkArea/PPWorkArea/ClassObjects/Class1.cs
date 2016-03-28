@@ -6,6 +6,7 @@ using System.Web;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using TestClassLibraryNamespace;
 
 namespace PPWorkArea.ClassObjects
 {
@@ -44,5 +45,16 @@ namespace PPWorkArea.ClassObjects
             return dt;
 
         }
+
+        public static string RetrieveClientID()
+        {
+            return TestClassObject.GetClientID;   
+        }
+
+        public static string RetrieveSecretID()
+        {
+            return TestClassObject.GetSecretID;
+        }
+
     }
 }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Services;
 // added usings
 using System.Web.Script.Services;
+using PPWorkArea.ClassObjects;
 
 namespace PPWorkArea.webservices
 {
@@ -23,6 +24,18 @@ namespace PPWorkArea.webservices
         public string HelloWorld()
         {
             return "Hello World";
+        }
+
+        [WebMethod]
+        public string RetrieveClientID()
+        {
+            return Class1.RetrieveClientID();
+        }
+
+        [WebMethod]
+        public string RetrieveSecretID()
+        {
+            return Class1.RetrieveSecretID();
         }
     }
 }

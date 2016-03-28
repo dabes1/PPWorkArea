@@ -15,7 +15,7 @@
                 <asp:ScriptReference Path="~/scripts/WorkArea.js" />
             </Scripts>
             <Services>
-                <asp:ServiceReference Path="~/webservices/WorkArea.asmx" /> 
+                <asp:ServiceReference Path="~/webservices/WorkAreaWebServices.asmx" /> 
             </Services>
         </asp:ScriptManager>
 
@@ -27,9 +27,21 @@
         </div>
 
 
-        <iframe height="500" width="500" src="http://www.bengals.com">
+        <div>
+            <h1>Test the external TestClassLibrary dll</h1>
+            <div>
+                <input type="button"  class="buttonStd" value="Display" onclick="DisplayClientID()" />
+                <asp:TextBox runat="server" ID="tbxClientID" Height="20"></asp:TextBox>
+             </div>
+            <div>
+                <input type="button"  class="buttonStd" value="Display" onclick="DisplaySecretID()" />
+                <asp:TextBox runat="server" ID="tbxSecretID" Height="20"></asp:TextBox>
+            </div>
+        </div>
 
-        </iframe>
+<%--        <iframe height="500" width="500" src="http://www.bengals.com">
+
+        </iframe>--%>
 
     </div>
     </form>
