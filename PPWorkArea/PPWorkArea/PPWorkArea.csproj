@@ -78,9 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="connections.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="packages.config" />
     <Content Include="Pages\WorkArea.aspx" />
     <Content Include="scripts\WorkArea.js" />
@@ -95,7 +92,6 @@
     <Content Include="scripts\ConnectToSQL.js" />
     <Content Include="scripts\Default.js" />
     <Content Include="scripts\PaymentWithCreditCard.js" />
-    <Content Include="Web.config" />
     <Content Include="webservices\PayPalWebServices.asmx" />
   </ItemGroup>
   <ItemGroup>
@@ -145,14 +141,6 @@
       <DependentUpon>WorkAreaWebServices.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
